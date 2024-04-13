@@ -100,7 +100,10 @@ namespace SourceInspector
                             string message = commit.Message;
                             int colonPosition = message.IndexOf(":");
                             if (colonPosition > 0)
-                            {
+                            {   // Attempted to read the title from the Jira page but didn't
+                                // work due to the use of multi-factor authentication or other
+                                // server restriction
+                                
                                 //string jiraIssue = message.Substring(0, colonPosition - 1);
                                 //string title = JiraReader.GetJiraTitle(jiraIssue.Trim());
                                 //writer.WriteLine("Jira Title: " + title);
